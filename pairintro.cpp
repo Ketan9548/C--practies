@@ -21,6 +21,6 @@ int main()
     l = 9;
 
     Pair values = getminmx(k, l);
-    cout << "min: " << values.min << " max: " << values.max << endl;
+    cout << values.min << " " << values.max << endl;
     return 0;
 }
