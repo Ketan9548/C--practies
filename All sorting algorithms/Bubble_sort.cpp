@@ -10,27 +10,15 @@ int main()
     int counter = 1;
     while (counter < n)
     {
-        bool swapping = false;
         for (int i = 0; i < n - counter; i++)
         {
             if (v[i] > v[i + 1])
             {
                 swap(v[i], v[i + 1]);
-                swapping = true;
-            }
-            else
-            {
-                continue;
-            }
-            if (swapping == false)
-            {
-                cout << "Array is aready sorted: ";
-                break;
             }
         }
         counter++;
     }
-    // cout << "This is Bubble Sort Algo: " << endl;
     for (auto &&i : v)
     {
         cout << i << " ";
