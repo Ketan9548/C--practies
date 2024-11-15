@@ -17,16 +17,16 @@ int main()
                 min_ind = j;
             }
         }
-        swap(v[i],v[min_ind]);
+        swap(v[i], v[min_ind]);
     }
 
     for (auto &&i : v)
     {
-        cout << i << " ";
+        cout << "Sorted element is: " << i << endl;
     }
     return 0;
 }
- 
+
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
