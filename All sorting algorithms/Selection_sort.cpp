@@ -1,21 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 int main()
 {
     vector<int> v = {3, 2, 15, 32, 76, 12, 23, 43};
     int n = v.size();
 
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        int key = v[i];
-        int j = i - 1;
-        while (j >= 0 && v[j] > key)
+        int min_ind = i;
+        for (int j = i + 1; j < n; j++)
         {
-            v[j + 1] = v[j];
-            j = j - 1;
+            if (v[j] < v[min_ind])
+            {
+                min_ind = j;
+            }
         }
-        v[j + 1] = key;
+        swap(v[i],v[min_ind]);
     }
 
     for (auto &&i : v)
