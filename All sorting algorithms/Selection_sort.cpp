@@ -9,15 +9,14 @@ int main()
 
     for (int i = 0; i < n - 1; i++)
     {
-        int min_ind = i;
+        int min_element = v[i];
         for (int j = i + 1; j < n; j++)
         {
-            if (v[j] < v[min_ind])
+            if (v[j] < min_element)
             {
-                min_ind = j;
+                swap(v[j],min_element);
             }
         }
-        swap(v[i],v[min_ind]);
     }
 
     for (auto &&i : v)
